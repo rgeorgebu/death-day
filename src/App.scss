@@ -1,0 +1,48 @@
+$base-measurement: 1rem;
+$phone-width: 500px;
+
+
+html {
+	font-family: sans-serif;
+	background-color: black;
+}
+
+h1, p {
+	color: lightgray;
+}
+
+.app {
+	width: 50%;
+	margin: auto;
+	padding: 0 $base-measurement;
+}
+
+.dateSelects {
+	display: flex;
+	.select {
+		flex: 1;
+		& + .select {
+			margin-left: $base-measurement;
+		}
+	}
+}
+
+.button {
+	margin: auto;
+	display: block;
+	margin-top: $base-measurement * 3;
+	background-color: darkslategray;
+	border: 1px solid lightgray;
+	color: lightgray;
+	box-shadow: none;
+	padding: $base-measurement * 0.5 $base-measurement;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: $base-measurement * 0.25;
+}
+
+@media screen and (max-width: $phone-width) {
+	.app {
+		width: 90%;
+	}
+}

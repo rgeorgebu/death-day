@@ -57,5 +57,5 @@
     "*.{js,jsx}": "eslint --cache --fix ./src",
     "*.{js,jsx,css,md}": "prettier --write ./src"
   },
-  "homepage": "http://rgeorgebu.github.io/death-day"
+  "homepage": "https://rgeorgebu.github.io/death-day/"
 }

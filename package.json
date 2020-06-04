@@ -1,0 +1,8 @@
+{
+  "name": "death-day",
+  "version": "1.0.0",
+  "description": "A simple site that predicts the time of death based on user input",
+  "author": "George Burkhardt <rgeorgebu@gmail.com>",
+  "license": "MIT",
+  "private": true
+}

@@ -22,11 +22,12 @@
     "core-js": "^3.6.5",
     "css-loader": "^3.5.2",
     "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-react": "^7.20.0",
     "gh-pages": "^3.0.0",
     "html-webpack-plugin": "^4.2.0",
     "husky": ">=4",
-    "jest": "^25.4.0",
     "lint-staged": ">=10",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.0",
@@ -43,7 +44,8 @@
     "build": "webpack --env production",
     "start": "webpack-dev-server",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d public",
+    "lint": "eslint --fix ./src"
   },
   "engines": {
     "node": "^12.9.1",
@@ -55,8 +57,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint --cache --fix ./src",
-    "*.{js,jsx,css,md}": "prettier --write ./src"
+    "*.{js,jsx}": "yarn lint"
   },
   "homepage": "https://rgeorgebu.github.io/death-day/"
 }

@@ -28,3 +28,14 @@ export function incrementDate(oldDate) {
 export function isNullRow(row) {
 	return !row.reduce((agg, ele) => ele || agg, false);
 }
+
+// https://www.worldometers.info/demographics/life-expectancy/
+const LIFE_EXPECTANCY_YEARS = 73.2;
+const LIFE_EXPECTANCY_MILLIS =
+	LIFE_EXPECTANCY_YEARS * 365 * 24 * 60 * 60 * 1000;
+
+export function getTimeLeft(birthDate) {
+	return Math.floor(
+		(LIFE_EXPECTANCY_MILLIS - (Date.now() - birthDate.getTime())) / 1000
+	);
+}

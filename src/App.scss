@@ -1,5 +1,25 @@
+$base-measurement: 1rem;
+
 html {
 	font-family: sans-serif;
 	background-color: black;
-	color: lightgray;
+}
+
+.app {
+	width: $base-measurement * 20;
+	margin: 0 auto;
+
+	h1, h2 {
+		color: lightgray;
+	}
+}
+
+.dateSelects {
+	display: flex;
+	& > * {
+		flex: 1;
+		&:last-child {
+			margin-left: $base-measurement;
+		}
+	}
 }

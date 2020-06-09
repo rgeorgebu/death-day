@@ -1,4 +1,6 @@
 $base-measurement: 1rem;
+$border-radius: $base-measurement * 0.25;
+$background-color-transition: background-color 200ms ease-in;
 
 html {
 	font-family: sans-serif;
@@ -21,5 +23,62 @@ html {
 		&:last-child {
 			margin-left: $base-measurement;
 		}
+	}
+}
+
+.calendarControl {
+	margin-top: $base-measurement;
+}
+
+.buttonControl {
+	display: flex;
+	justify-content: center;
+	margin-top: $base-measurement;
+}
+
+.calendar {
+	background-color: white;
+	border-radius: $border-radius;
+	.week {
+		display: flex;
+		& + .week {
+			margin-top: $base-measurement * 0.5;
+		}
+
+		.day {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: $base-measurement * 3;
+			transition: $background-color-transition;
+			border-radius: $border-radius;
+
+			&.selected {
+				background-color: gray;
+				color: white;
+			}
+
+			&:hover:not(.disabled):not(.selected) {
+				background-color: lightgray;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.button {
+	border-radius: $border-radius;
+	padding: $base-measurement $base-measurement * 2;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: 1px solid gray;
+	color: black;
+	background-color: white;
+	transition: $background-color-transition;
+
+	&:hover {
+		background-color: lightgray;
+		cursor: pointer;
 	}
 }
